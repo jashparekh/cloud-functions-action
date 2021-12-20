@@ -165,10 +165,8 @@ def _deploy(debug_mode: bool):
 
 
 def main():
-    env_debug_mode: str = os.environ.get("debug_mode", "true").title()
+    env_debug_mode: str = os.environ.get("debug_mode", "false").title()
     debug_mode = ast.literal_eval(env_debug_mode)
-
-    print(os.environ)
 
     _validate_env_variables()
     if _validate_if_path_exists():
