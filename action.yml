@@ -21,6 +21,9 @@ inputs:
   credentials:
     description: 'Service account to autheticate with BigQuery'
     required: true
+  debug_mode:
+    description: 'Enable debug mode'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
