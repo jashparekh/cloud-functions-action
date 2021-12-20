@@ -1,7 +1,7 @@
 [![Actions Status](https://github.com/jashparekh/cloud-functions-action/workflows/Lint/badge.svg?branch=main)](https://github.com/jashparekh/cloud-functions-action/actions)
 [![Actions Status](https://github.com/jashparekh/cloud-functions-action/workflows/Unit%20Tests/badge.svg?branch=main)](https://github.com/jashparekh/cloud-functions-action/actions)
 [![Actions Status](https://github.com/jashparekh/cloud-functions-action/workflows/Integration%20Test/badge.svg?branch=main)](https://github.com/jashparekh/cloud-functions-action/actions)
-![Version](https://img.shields.io/static/v3.svg?label=Version&message=v1&color=lightgrey&?link=http://left&link=https://github.com/jashparekh/cloud-functions-action/tree/v3)
+![Version](https://img.shields.io/static/v3.svg?label=Version&message=v1&color=lightgrey&?link=http://left&link=https://github.com/jashparekh/cloud-functions-action/tree/v1)
 
 
 # Cloud Function Github Action
