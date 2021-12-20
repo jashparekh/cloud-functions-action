@@ -11,15 +11,15 @@ env:
   PYTHON_VERSION: "3.10.1"
 
 jobs:
-  deploy_schemas:
+  deploy_cloud_function:
     runs-on: ubuntu-latest
-    name: Deploy cloud functions
+    name: Deploy code to Cloud Function
     steps:
       # To use this repository's private action,
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Deploy schemas to BigQuery
+      - name: Deploy code to Cloud Function
         uses: ./ # Uses an action in the root directory
         env:
           gcp_project: "wf-gcp-us-ae-buyfair-dev"
