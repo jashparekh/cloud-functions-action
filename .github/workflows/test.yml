@@ -5,7 +5,7 @@ on:
       branches: ["main"]
 
 env:
-  PYTHON_VERSION: "3.10"
+  PYTHON_VERSION: "3.10.1"
 
 jobs:
   test:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [ "3.6", "3.7", "3.8", "3.9", "3.10" ]
+        python-version: [ "3.6", "3.7", "3.8", "3.9", "3.10.1" ]
     steps:
       - name: Check out code
         uses: actions/checkout@v2.3.4
@@ -27,7 +27,7 @@ jobs:
           test-requirements: "true"
 
       - name: Run pytest
-        run: pytest --cov deploy tests/test_deploy.py --cov-report xml:coverage-${{ env.PYTHON_VERSION }}.xml --junitxml=test-results-${{ env.PYTHON_VERSION }}.xml
+        run: pytest --cov plugin_scripts tests/test_deploy.py --cov-report xml:coverage-${{ env.PYTHON_VERSION }}.xml --junitxml=test-results-${{ env.PYTHON_VERSION }}.xml
 
       - name: Upload pytest test results artifact
         uses: actions/upload-artifact@v2
