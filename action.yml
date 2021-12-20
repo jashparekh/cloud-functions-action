@@ -1,6 +1,6 @@
 ## action.yml
-name: 'Google Bigquery "Deploy table, view and other structure definitions" Action for Github Action'
-description: 'Creates a Bigquery structure if it does not exists, else updates it'
+name: 'Google Cloud Function "Deploy code" Action for Github Action'
+description: 'This Github action can be used to deploy code to Cloud Functions.'
 author: 'Jash Parekh <me@jashparekh.com>'
 branding:
   icon: 'activity'
