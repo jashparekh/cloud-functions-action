@@ -165,7 +165,7 @@ def _deploy(debug_mode: bool):
 
 
 def main():
-    env_debug_mode: str = os.environ.get("debug_mode", "false").title()
+    env_debug_mode: str = os.environ.get("debug_mode", "true").title()
     debug_mode = ast.literal_eval(env_debug_mode)
 
     _validate_env_variables()
