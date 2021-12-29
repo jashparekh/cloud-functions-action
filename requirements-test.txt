@@ -6,4 +6,4 @@ mypy==0.930
 pytest==6.2.5
 pytest-cov==3.0.0
 pytest-mock==3.6.1
-types-requests==2.26.2
+types-requests==2.26.3
