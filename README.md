@@ -28,13 +28,16 @@ jobs:
         uses: actions/checkout@v2.3.4
       - name: Deploy code to Cloud Function
         uses: jashparekh/cloud-functions-action@v1
-        env:
+        with:
           gcp_project: "gcp-us-project"
           gcp_region: "us-central1"
           cloud_function_name: "function-1"
           cloud_function_directory: "directory/function-code"
           credentials: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 ```
+
+Inputs are set with `with:`. Setting them as step `env:` variables with the same lower case names
+(`gcp_project: ...`) still works; the `with:` input wins when both are set.
 
 ## Configuration
 
@@ -67,6 +70,15 @@ Example: `directory/function-code`
 ### `credentials` (required, string)
 
 Google Service Account with permission to create objects in the specified project. Can be stored as a [repository secret](https://docs.github.com/en/actions/reference/encrypted-secrets)
+
+### `debug_mode` (optional, `true` or `false`, default `false`)
+
+Logs the function definition (without its environment variables) and the upload response.
+
+## What is uploaded
+
+Everything under `cloud_function_directory` except `.git/`, `__pycache__/`, `*.pyc`, `.env`, `.env.*` and
+`.DS_Store`. The files are added in sorted order. The deploy fails if nothing is left to upload.
 
 ## Contributing
 

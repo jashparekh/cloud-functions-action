@@ -19,11 +19,12 @@ inputs:
     description: 'The directory in your repository where are you storing the code files for cloud function'
     required: true
   credentials:
-    description: 'Service account to autheticate with BigQuery'
+    description: 'Service account key (JSON) with permission to update the Cloud Function. Store it as a secret.'
     required: true
   debug_mode:
-    description: 'Enable debug mode'
+    description: 'Log more details (`true` or `false`). Environment variables of the function are never logged.'
     required: false
+    default: 'false'
 runs:
   using: 'docker'
   image: 'Dockerfile'
