@@ -1,11 +1,9 @@
 name: "Integration Test"
+# Manual only: deploys to a real project with a repository secret. It used to run on
+# pull_request_target (secrets available to PR-triggered runs) against a project this
+# repository's service account can no longer deploy to, so it failed on every PR.
 on:
-  push:
-    branches:
-      - main
-  pull_request_target:
-    branches:
-      - main
+  workflow_dispatch: {}
 
 env:
   PYTHON_VERSION: "3.10.1"
